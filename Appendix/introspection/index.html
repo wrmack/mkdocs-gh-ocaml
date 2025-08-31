@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../syntax/">
+      
+      
+        <link rel="next" href="../finding/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Inspecting code in utop and at runtime - OCaml notes</title>
+        <title>Inspecting code - OCaml notes</title>
       
     
     
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inspecting code in utop and at runtime
+              Inspecting code
             
           </span>
         </div>
@@ -783,50 +787,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Type%20system/patmatching/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Pattern matching
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Type system/introspection.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Inspecting code
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
     
@@ -837,10 +797,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
-          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -852,8 +812,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             Reading signatures
           </label>
@@ -1433,6 +1393,28 @@
   
   <span class="md-ellipsis">
     loops
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Controls/sequences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sequences
     
   </span>
   
@@ -2118,8 +2100,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -2129,11 +2113,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
@@ -2148,7 +2132,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Appendix
@@ -2194,6 +2178,89 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Inspecting code
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Inspecting code
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#utop" class="md-nav__link">
+    <span class="md-ellipsis">
+      utop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstract-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstract types
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2325,7 +2392,7 @@
 </span></code></pre></div>
 </div>
 <h2 id="abstract-types">Abstract types</h2>
-<p>See <a href="../modules.md">modules</a> for examples of reducing abstraction.</p>
+<p>See <a href="../../Modules/modules/">modules</a> for examples of reducing abstraction.</p>
 <div class="admonition understanding">
 <p class="admonition-title">Brief explanation</p>
 <p>A module can hide the definition of a type.</p>
