@@ -6,8 +6,8 @@
     (* Defining a module type *)
     module type Myarith = sig
       type t
-      val myadd int -> int
-      val mysub int -> int
+      val myadd: int -> int
+      val mysub: int -> int
     end
     ```
     ```ocaml

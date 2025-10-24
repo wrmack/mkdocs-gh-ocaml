@@ -14,7 +14,7 @@ There is some excellent documentation aleady available for OCaml:
 - [Think OCaml](https://www.greenteapress.com/thinkocaml/thinkocaml.pdf)
 - [Building OCaml Applications from Basic to Advanced Features](https://app.studyraid.com/en/courses/12215/building-ocaml-applications-from-basic-to-advanced-features) (tutorial constructed by AI)
 
-However, I only dabble in OCaml from time so: 
+However, I only dabble in OCaml from time to time so: 
 
 - I need a quick reference that is more than a cheat sheet
 - I like the adage: to learn something, teach it (in this case, write up some documentation)[^fn1] 

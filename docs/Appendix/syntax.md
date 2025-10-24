@@ -22,7 +22,49 @@ A quick reference.
     let x = 2 in
     let y = x + 3
     ```
-    
+## Functions
+
+This is an anonymous function.
+
+!!! example "Example"
+    ```ocaml
+    (fun x -> x + 1)
+
+    (* apply it - returns 5 *)
+    (fun x -> x + 1) 4
+    ```
+This is a function which is bound to a name using `let`.
+
+!!! example "Example"
+    ```ocaml
+    let myfun = (fun x -> x + 1)
+
+    (* apply it - returns 5 *)
+    myfun 4
+    ```
+
+This is alternative syntax for a named function.
+
+!!! example "Example"
+    ```ocaml
+    let myfun x = x + 1
+
+    (* apply it - returns 5 *)
+    myfun 4   
+    ```
+This uses the `function` keyword:
+
+- takes only one parameter
+- uses pattern-matching
+
+!!! example "Example"
+    ```ocaml
+    let myfun = function |x -> x + 1
+
+    (* apply it - returns 5 *)
+    myfun 4   
+    ```
+
 ## list
 
 !!! example "Examples"

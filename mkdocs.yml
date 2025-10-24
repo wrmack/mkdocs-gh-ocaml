@@ -1,4 +1,4 @@
-site_name: OCaml notes
+site_name: Warwick's OCaml notes
 
 nav:
   - Introduction:
@@ -14,7 +14,7 @@ nav:
     - Functional programming: 'Understanding/functional.md'
     - Lambda calculus: 'Understanding/lambda.md'
     - Mutability: 'Understanding/mutability.md'
-    - Type theory: 'Understanding/logic.md'
+    - Types, maths and logic: 'Understanding/logic.md'
   - Type system: 
     - Understanding types: 'Type system/understand.md'
     - Predefined types: 'Type system/builtin.md'
@@ -22,8 +22,6 @@ nav:
     - Parameterised types: 'Type system/parameterised.md'
     - Polymorphic variants: 'Type system/polymorphic.md'
     - Generalized Algebraic Datatypes (GADT): 'Type system/gadt.md'
-    - Pattern matching: 'Type system/patmatching.md'
-    - Inspecting code: 'Type system/introspection.md'
     - Reading signatures:
        - Why?: 'Type system/Signatures/introduction.md'
        - cmdliner: 'Type system/Signatures/cmdliner.md'
@@ -34,18 +32,22 @@ nav:
     - Functions: 
       - Functions: Functions/functions.md
       - Recursive functions: Functions/recursion.md
-    - Lists: 
-      - Create and access a list: Lists/list_create.md
-      - Operations on lists: Lists/list_ops.md   
-    - Arrays:
-      - Create and access an array: Arrays/array_create.md
-      - Operations on arrays: Arrays/array_ops.md
-    - Records: records.md
-    - Tuples: tuples.md
+    - Primitives: primitives.md
+    - Collections of primitives:
+      - Lists: 
+        - Create and access a list: Lists/list_create.md
+        - Operations on lists: Lists/list_ops.md   
+      - Arrays:
+        - Create and access an array: Arrays/array_create.md
+        - Operations on arrays: Arrays/array_ops.md
+      - Tuples: tuples.md
+    - User-defined types:
+      - Records: records.md
     - Control structures:
       - Overview: Controls/overview.md
       - if...else: Controls/ifelse.md
       - loops: Controls/loops.md
+      - sequences: Controls/sequences.md
     - Data structures:
       - Data/hash_tables.md
       - Data/sequences.md
@@ -72,6 +74,7 @@ nav:
   - Appendix: 
     - Glossary: Appendix/glossary.md
     - Syntax summary: Appendix/syntax.md
+    - Inspecting code: Appendix/introspection.md
     - Finding stuff: Appendix/finding.md
     - Filename extensions: Appendix/extensions.md
 theme:

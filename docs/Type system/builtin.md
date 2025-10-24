@@ -2,7 +2,7 @@
 Type definitions that are built into OCaml.
 
 ## Primitives 
-A primitive cannot be contructed from other types
+A primitive cannot be constructed from other types
 
 |Value is     | Type     | Example value      |
 |-------------|----------|--------------------|

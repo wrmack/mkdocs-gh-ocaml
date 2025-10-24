@@ -1,8 +1,25 @@
 # README
-## Server
-Default address is localhost:8000 which cannot be accessed from macos.
 
-To access from macos start server with (substitute correct ip):
+Enter the virtual environment:
+
 ```bash
-mkdocs serve -a 192.168.82.2:8000
+source venv/bin/activate
+```
+
+To start the local server:
+
+```bash
+mkdocs serve -a 192.168.50.173:8000
+```
+
+To build the site:
+
+```bash
+mkdocs build
+```
+
+To deploy to Github pages:
+
+```bash
+mkdocs gh-deploy
 ```

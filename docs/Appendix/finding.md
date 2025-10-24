@@ -12,3 +12,4 @@ odig
 
 ocp-index
 
+ocamlfind

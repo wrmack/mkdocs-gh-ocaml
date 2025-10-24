@@ -15,7 +15,7 @@ In utop
     ```
 ## Abstract types
 
-See [modules](../modules.md) for examples of reducing abstraction.
+See [modules](../Modules/modules.md) for examples of reducing abstraction.
 
 !!! understanding "Brief explanation"
     A module can hide the definition of a type.

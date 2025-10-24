@@ -29,14 +29,14 @@
 
 #### `abstract data type`
 
-  : See [Modules](Modules/modules.md#abstract-data-types) and [Introspection](Type system/introspection.md#abstract-types)
+  : See [Modules](../Modules/modules.md#abstract-data-types) and [Inspecting code](introspection.md#abstract-types)
 
 #### `abstract syntax tree (AST)`
 
 #### `abstraction`
 
 #### `algebraic data type (ADT)`
-  : See [Understanding types](Type system/understand.md#logic-mathematics-type-theory)
+  : See [Understanding types](../Type system/understand.md#logic-mathematics-type-theory)
 
 #### `argument`
   : See `parameter`.
@@ -46,12 +46,19 @@
 #### `assembly language`
 
 #### `association list`
+  : Provides a mapping of keys and values using a list of pairs:
+  ```ocaml
+  let assoc = [("rectangle", 4); ("nonagon", 9); ("icosagon", 20)]
+  ```
 
 #### `atomic`
 
 #### `BNF`
 
 #### `byte code`
+
+#### `compilation unit` 
+  : a source file
 
 #### `concatenate`
 
@@ -105,7 +112,7 @@
 
 #### `Generalized Algebraic Data Type (GADT)`
 
-  : See [Generlized Algebraic Datatypes](Type system/gadt.md)
+  : See [Generlized Algebraic Datatypes](../Type system/gadt.md)
 
 #### `heap`
 
@@ -119,14 +126,14 @@
 #### `introspection`
 
 #### `lambda calculus`
-  : See [Lambda calculus](Functions/lambda.md)
+  : See [Lambda calculus](../Understanding/lambda.md)
 
 #### `lexer`
 
 #### `module`
 
 #### `monad`
-  : See [monads](monads.md)
+  : See [monads](../Modules/monads.md)
   
 #### `mutable`
 
@@ -168,7 +175,7 @@
     A type's paramemters are written to the left of the type constructor.
     
 #### `parameterised type`
-  : See [Parameterised type](Type system/parameterised.md)
+  : See [Parameterised type](../Type system/parameterised.md)
 
 #### `parser`
 
@@ -187,7 +194,7 @@
   
     GDB: https://sourceware.org/gdb/wiki/Internals%20All-About-Stack-Frames
   
-    - LIFO
+    - LIFO (Last In First Out)
     - comprises frames 
     - each frame represents a function call and includes the return address
     - frame includes function variables
@@ -212,7 +219,7 @@
 
   : Data is held in memory. A compiler needs to have information about how to use what is held in memory. A value has an associated *type* (or *data type*).
   
-    Further info: [Type system](Type system/understand.md)
+    Further info: [Type system](../Type system/understand.md)
 
   
 #### `value`
@@ -225,5 +232,5 @@
 
   : a function which can take a variable number of paramaters
 
-#### `when``
+#### `when`
   : `when`is a keyword used in pattern-matching guards

@@ -4,6 +4,14 @@ The type is defined by the user.
 
 ## Records
 
+A record is a collection of key / value pairs.
+
+A record type is defined:
+
+```ocaml
+type [name] = {key1:type; key2:type; key3:type}
+```
+
 !!! example "Examples"
     ```ocaml
     type car = {maker:string; model:string; year:int};; 

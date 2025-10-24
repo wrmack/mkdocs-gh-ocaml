@@ -5,6 +5,10 @@
     
     A functor is simply a “function” from modules to modules [OCaml programming](https://cs3110.github.io/textbook/chapters/modules/functors.html?highlight=functor)
 
+    In the same way that functions are used to construct new values given other values as parameters, functors are used to construct new modules given other modules as parameters. [OCamlverse](https://ocamlverse.net/content/functors_intro.html#introduction-to-functors)
+
+    The module type expression *[functor] ( module-name : module-type1 ) -> module-type2* is the type of functors (functions from modules to modules) that take as argument a module of type *module-type1* and return as result a module of type *module-type2*. [OCaml manual](https://ocaml.org/manual/5.4/modtypes.html#ss%3Amty-functors)
+
 !!! example "Example"
     ```ocaml
     module type X = sig
@@ -24,7 +28,7 @@
     
     ```ocaml
     module type X = sig val x : int end
-    module IncX : functor (M : X) -> sig val x : int end
+    module IncX : (M : X) -> sig val x : int end
     ```
     
     The functor, IncX, is defined. 

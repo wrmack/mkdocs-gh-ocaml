@@ -2,6 +2,20 @@
 
 A monad is a design pattern. 
 
+A monad takes a type and wraps it in a monad type such that the new monad type holds the original type as well as additional information.
+
+!!! example "Example monads"
+
+    The option monad
+
+    : takes a type (for example an integer 'x') and wraps it in an option type such that if 'x' does not have a value it returns `None` otherwise `Some x`
+
+    The writer monad
+    : takes a computation and wraps it with logging information for debugging purposes
+
+    The data monad
+    : wraps a type with additional data information which needs to be tracked, rather than using side-effects as in imperative programming 
+
 ## Monad signature
 
 A monad has the signature:
@@ -48,9 +62,16 @@ In imperative languages, this additional information, which might be some form o
     Or I could use a monad.
     
     [Philip Wadler](https://homepages.inf.ed.ac.uk/wadler/papers/marktoberdorf/baastad.pdf)
-## Monad example
-!!! example "Writer monad"
+
+## Monad examples
+!!! example "Writer monad 1"
     The Writer monad can be used to write logs while evaluating functions.
+
+    The Writer monad has the type `type 'a t = 'a * string`. It takes the original type and wraps it into a tuple comprising the original type and a string.  The string contains the logging information.
+
+    The `Writer.return` function returns the monad type with the string initialised to `""`.
+
+    The `Writer.bind` function takes a value `m`, of monad type (a tuple comprising the original type and a string), extracts the original value, applies the function `f` to the original value to get a result in monad form (a tuple). The function `f` must be a function that returns a tuple of the Writer monad type (a tuple). Finally, `Writer.bind` returns a value of monad type comprising the result and a concatention of the strings.
    
     ```ocaml
     (* The monad signature *)
@@ -59,13 +80,13 @@ In imperative languages, this additional information, which might be some form o
       val return : 'a -> 'a t
       val bind : 'a t -> ('a -> 'b t) -> 'b t
       val ( let* ): 'a t -> ('a -> 'b t) -> 'b t 
-    end;;
+    end
     
     (* The function to log written as fun *)
-    (fun x -> x + 7);;
+    (fun x -> x + 7)
     
     (* The same function written as a named function *)
-    let myfunction x = x + 7;;
+    let myfunction x = x + 7
     
     (* The writer monad *)
     module Writer: (Monad with type 'a t = 'a * string) = 
@@ -77,33 +98,33 @@ In imperative languages, this additional information, which might be some form o
         let (y, s2) = f x in
         (y, s1 ^ s2) 
       let ( let* ) m f = bind m f 
-    end;;
+    end
     
     (* The type of the Writer monad is a tuple containing two elements:
        - a value of any type
        - a string for logging *)
        
     (* Using the monad *)
-    open Writer;;
+    open Writer
     
-    (* - using Writer.bind and fun *)
-    bind (10, "Param is 10; ") (fun x -> (x + 7, "Function is x + 7"));;
+    (* Using Writer.bind and fun *)
+    bind (10, "Param is 10; ") (fun x -> (x + 7, "Function is x + 7"))
   
-    (* - using let* syntax *)
+    (* Using let* syntax *)
     let* x = (10, "Param is 10; ") in
-    (myfunction x, "Function is x + 7");;
+    (myfunction x, "Function is x + 7")
     
     (* Compare original code with the monad form *)
     
     (* Original *)
     let result =
       let x = 10 in
-      myfunction x;;
+      myfunction x
       
     (* Using the monad for logging *)
     let result = 
       let* x = (10, "Param is 10; ") in
-      (myfunction x, "Function is x + 7");;
+      (myfunction x, "Function is x + 7")
     
     ```
     The code above more succintly for copying to utop:
@@ -138,6 +159,55 @@ In imperative languages, this additional information, which might be some form o
     (myfunction x, "another logging phrase");;
     
     ```
+!!! example "Writer monad 2"
+
+    In this example "bind" is defined slightly differently but has the same signature. It might be easier to see what is going on.
+
+    ```ocaml
+    (* The monad signature *)
+    module type Monad = sig
+      type 'a t
+      val return : 'a -> 'a t
+      val bind : 'a t -> ('a -> 'b t) -> 'b t
+    end
+
+    (* The writer monad *)
+    module Writer: (Monad with type 'a t = 'a * string) = 
+    struct
+      type 'a t = 'a * string
+      let return x = (x, "")
+
+      (* The function f must be such that, when it is applied to x, 
+        it returns a tuple containing y, the computation result, and the log string. *)
+      let bind (x, log1) f = 
+        let (y,log2) = f x in
+        (y, log1^log2)
+    end
+
+    open Writer
+
+    let computation =
+      bind (return 3) (fun x ->
+        let res = x + 1 in
+        bind ((), (Printf.sprintf "Integer: %d\nComputed increment: %d\n" x res)) (fun () ->
+          return res
+        )
+      ) 
+
+    let () =
+      let (result, log) = computation in
+      Printf.printf "Result: %d\n" (result);
+      Printf.printf "Log:\n%s\n" log
+
+    (* 
+      It produces:
+        Result: 4                         
+        Log:
+        Integer: 3
+        Computed increment: 4
+    *)
+    ```
+
 ## let* syntax
 !!! understanding "Understanding let* syntax"
     
@@ -160,3 +230,17 @@ In imperative languages, this additional information, which might be some form o
     Clearly, both examples above are similar except that the second example provides logging.
     
     `let* x` extracts the value of type `'a` from the `'a t` parameter, the function is applied to it and a value of type `'b t` is returned.
+
+## Syntax summary for bind and equivalents
+
+`bind`, `( >>= )` and `( let* )` have the same signature: `'a t -> ('a -> 'b t) -> 'b t`
+
+| You write                            |   Think of as                                           |
+| ------------------------------------ |  ------------------------------------------------------ |
+| `bind (return x) (fun x -> expr)`    | `bind` takes a wrapped x, and a function. It extracts x, applies the function to x and returns a wrapped result |
+| `(return x) >>= (fun x-> expr)`      | Inject x from its wrapped value into the function and return a wrapped result |
+| `let* x = (return x) in expr`        | Define x locally from its wrapped value to use in expr, returning a wrapped result  |
+
+
+
+

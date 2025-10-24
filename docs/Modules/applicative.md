@@ -91,8 +91,7 @@ end;;
       | Some f, Some x -> Some (f x)
       | _ -> None
     ```
-    Pattern-matching shows that in the case that `f_opt` matches the pattern `Some f` and `x_opt` matches the pattern `Some x` 
-    then the `apply` function will return `Some (f x)`. `(f x)` indicates `f` is a function that is applied to `x`.
+    Pattern-matching shows that in the case that `f_opt` matches the pattern `Some f`, and if `x_opt` matches the pattern `Some x`, then the `apply` function will return `Some (f x)`. `(f x)` indicates `f` is a function that is applied to `x`.
     
     The signature of the `apply` function is:
     ```ocaml
@@ -108,7 +107,7 @@ end;;
 
     ```ocaml
     apply (pure (fun x -> x + 1)) (Some 3);;
-    - : int t = Some 7
+    - : int t = Some 4
     ```
     
     #### Adding two integers of option types

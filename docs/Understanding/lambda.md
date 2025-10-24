@@ -17,7 +17,6 @@ Lambda calculus is composed of 3 elements: variables, functions, and application
     
     λx.x                 (fun x -> x)
     (λx.x) a             (fun x -> x) a     a
-    λx.x
     ```
 !!! reference "References"
     Wikipedia [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus)    
