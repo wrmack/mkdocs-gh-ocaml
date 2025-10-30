@@ -120,7 +120,9 @@ markdown_extensions:
 plugins:
   # - to-pdf:
   #     download_link: header
-  - git-revision-date-localized:
-      enable_creation_date: false
-      fallback_to_build_date: true
-  - document-dates
+  # - git-revision-date-localized:
+  #     enable_creation_date: false
+  #     fallback_to_build_date: true
+  - document-dates:
+      position: bottom
+      show_author: false
