@@ -9,14 +9,14 @@
    - reference
 */
 
-.md-typeset .admonition,
+/* .md-typeset .admonition,
 .md-typeset details {
     font-size: 16pt;
 } 
 .md-typeset code,
 .highlighttable .linenos {
     font-size: 11pt;
-}
+} */
 
 /* example admonition */
 :root {

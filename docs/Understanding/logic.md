@@ -1,5 +1,29 @@
 # Types, maths and logic
 
+## Category theory
+
+Category theory is a high-level abstraction of mathematics. Simplistically it has two key concepts: objects and arrows. An arrow (representing a morphism) defines the relationship between two objects. A category is a collection of objects and morphisms.
+
+When category theory is applied to programming languages, types can be considered as objects and functions as morphisms (the relationships between types).
+
+!!! reference "References"
+
+    An excellent resource is [Category Theory for Programmers](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/) by Bartosz Milewski. This has code snippets in C++ and Haskell.  
+    
+    A PDF OCaml edition is available [here](https://github.com/hmemcpy/milewski-ctfp-pdf/releases). 
+
+    These resources provide an understanding of many functional programming concepts:
+
+    - algebraic data types
+    - product types
+    - sum types
+    - functors
+    - monads
+  
+
+
+## Curry-Howard correspondence
+
 There is a correspondence between the language of logic and mathematics and the language of types:    
 [Curry-Howard correspondence](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence)    
 [Type theory](https://en.wikipedia.org/wiki/Type_theory), [Intuitionistic logic](https://en.wikipedia.org/wiki/Type_theory#Connections_to_foundations)    

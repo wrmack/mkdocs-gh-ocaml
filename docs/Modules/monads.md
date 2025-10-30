@@ -207,6 +207,24 @@ In imperative languages, this additional information, which might be some form o
         Computed increment: 4
     *)
     ```
+!!! example "Data monad"
+
+    The type signature is:
+
+    ```ocaml
+    type 'a t = state -> 'a * state
+    ```
+    
+    The type is a function that takes a state and returns a tuple comprising a value and a state.
+
+    The `return` and `bind` functions are:
+
+    ```ocaml
+    let return x = fun state -> (state,x)
+    let bind m f = fun state -> 
+      let (x,new_s) = m state in
+      f x new_s
+    ```
 
 ## let* syntax
 !!! understanding "Understanding let* syntax"

@@ -4,6 +4,11 @@
 
 # Introduction
 
+!!! note 
+
+    These notes are a work in progress
+
+
 ## Why these notes
 There is some excellent documentation aleady available for OCaml:
 
