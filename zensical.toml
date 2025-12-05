@@ -127,6 +127,8 @@ variant = "modern"
 features = [
   "navigation.path",
   "navigation.footer",
+  "content.code.copy",
+  "navigation.sections",
 ]
 
 [[project.theme.palette]] 
@@ -144,3 +146,4 @@ toggle.name = "Switch to light mode"
 [project.markdown_extensions.pymdownx.details]
 [project.markdown_extensions.pymdownx.superfences]
 [project.markdown_extensions.footnotes]
+[project.markdown_extensions.def_list]
