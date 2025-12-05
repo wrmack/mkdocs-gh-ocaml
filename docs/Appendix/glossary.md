@@ -57,8 +57,13 @@
 
 #### `byte code`
 
+#### `category theory`
+
 #### `compilation unit` 
   : a source file
+
+#### `composition`
+  : function composition
 
 #### `concatenate`
 

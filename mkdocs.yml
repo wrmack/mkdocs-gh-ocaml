@@ -8,13 +8,13 @@ nav:
     - opam: 'Getting started/opam.md'
     - utop: 'Getting started/utop.md'
     - OCaml manual notation: 'Getting started/manual.md'
-    - Style guide: 'Getting started/styleguide.md'
   - Understanding:
     - Do I need this?: 'Understanding/overview.md'
     - Functional programming: 'Understanding/functional.md'
     - Lambda calculus: 'Understanding/lambda.md'
     - Mutability: 'Understanding/mutability.md'
     - Types, maths and logic: 'Understanding/logic.md'
+    - History: 'Understanding/history.md'
   - Type system: 
     - Understanding types: 'Type system/understand.md'
     - Predefined types: 'Type system/builtin.md'
@@ -26,13 +26,25 @@ nav:
        - Why?: 'Type system/Signatures/introduction.md'
        - cmdliner: 'Type system/Signatures/cmdliner.md'
        - ocsigen: 'Type system/Signatures/ocsigen.md'
-  - Basics:
-    - let: 'let.md'
-    - Operators: 'operators.md'
+  - Syntax:
+    - Style guide: 'Syntax/styleguide.md'
+    - let: 'Syntax/let.md'
+    - Operators: 'Syntax/operators.md'
     - Functions: 
       - Functions: Functions/functions.md
       - Recursive functions: Functions/recursion.md
-    - Primitives: primitives.md
+    - Primitives: Syntax/primitives.md
+    - Algebraic data types:
+      - Sum types:
+        - Variants: ADT/variants.md
+        - Lists: ADT/lists.md
+        - Options: ADT/options.md
+        - Exceptions: ADT/exceptions.md
+        - Polymorphic variants: ADT/polymorphic.md
+      - Product types:
+        - Tuples: ADT/tuples.md
+        - Records: ADT/records.md
+      - Pattern matching: ADT/patterns.md
     - Collections of primitives:
       - Lists: 
         - Create and access a list: Lists/list_create.md
@@ -40,9 +52,9 @@ nav:
       - Arrays:
         - Create and access an array: Arrays/array_create.md
         - Operations on arrays: Arrays/array_ops.md
-      - Tuples: tuples.md
+      - Tuples: Syntax/tuples.md
     - User-defined types:
-      - Records: records.md
+      - Records: Syntax/records.md
     - Control structures:
       - Overview: Controls/overview.md
       - if...else: Controls/ifelse.md
@@ -62,6 +74,7 @@ nav:
       - Applicative functors: Modules/applicative.md      
       - Monads: Modules/monads.md
   - Libraries:
+    - Modules, libraries and packages: Libraries/packages.md
     - The standard library: Libraries/stdlib.md
     - Jane Street: Libraries/janest.md
     - Lwt: Libraries/lwt.md
@@ -73,6 +86,7 @@ nav:
     - Concurrency: Internals/concurrency.md
   - Appendix: 
     - Glossary: Appendix/glossary.md
+    - Extensions: Appendix/extensions.md
     - Syntax summary: Appendix/syntax.md
     - Inspecting code: Appendix/introspection.md
     - Finding stuff: Appendix/finding.md

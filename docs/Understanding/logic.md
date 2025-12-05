@@ -12,6 +12,8 @@ When category theory is applied to programming languages, types can be considere
     
     A PDF OCaml edition is available [here](https://github.com/hmemcpy/milewski-ctfp-pdf/releases). 
 
+    [First steps with Category Theory and OCaml](https://www.mseri.me/typeclass-ocaml/)
+
     These resources provide an understanding of many functional programming concepts:
 
     - algebraic data types

@@ -1,0 +1,145 @@
+[project]
+site_name = "Warwicks OCaml notes"
+repo_url = "https://github.com/wrmack/mkdocs-gh-ocaml"
+nav = [
+  {"Introduction" = "index.md"},
+  {"Getting started" = [
+    {"Install OCaml" = "Getting started/installation.md"},
+    {"opam" = "Getting started/opam.md"},
+    {"utop" = "Getting started/utop.md"},
+    {"OCaml manual notation" = "Getting started/manual.md"}
+  ]},
+  {"Understanding" = [
+    {"Do I need this?" = "Understanding/overview.md"},
+    {"Functional programming" = "Understanding/functional.md"},
+    {"Lambda calculus" = "Understanding/lambda.md"},
+    {"Mutability" = "Understanding/mutability.md"},
+    {"Types, maths and logic" = "Understanding/logic.md"},
+    {"History" = "Understanding/history.md"}
+  ]},
+  {"Type system" = [
+    {"Understanding types" = "Type system/understand.md"},
+    {"Predefined types" = "Type system/builtin.md"},
+    {"User-defined types" = "Type system/user.md"},
+    {"Parameterised types" = "Type system/parameterised.md"},
+    {"Polymorphic variants" = "Type system/polymorphic.md"},
+    {"Generalized Algebraic Datatypes (GADT)" = "Type system/gadt.md"},
+    {"Reading signatures" = [
+       {"Why?" = "Type system/Signatures/introduction.md"},
+       {"cmdliner" = "Type system/Signatures/cmdliner.md"},
+       {"ocsigen" = "Type system/Signatures/ocsigen.md"}
+       ]}
+  ]},
+  {"Syntax" = [
+    {"Style guide" = "Syntax/styleguide.md"},
+    {"let" = "Syntax/let.md"},
+    {"Operators" = "Syntax/operators.md"},
+    {"Functions" = [
+      {"Functions" = "Functions/functions.md"},
+      {"Recursive functions" = "Functions/recursion.md"}
+    ]},
+    {"Primitives" = "Syntax/primitives.md"},
+    {"Algebraic data types" = [
+      {"Sum types" = [
+        {"Variants" = "ADT/variants.md"},
+        {"Lists" = "ADT/lists.md"},
+        {"Options" = "ADT/options.md"},
+        {"Exceptions" = "ADT/exceptions.md"},
+        {"Polymorphic variants" = "ADT/polymorphic.md"}
+      ]},
+      {"Product types" = [
+        {"Tuples" = "ADT/tuples.md"},
+        {"Records" = "ADT/records.md"}
+      ]},
+      {"Pattern matching" = "ADT/patterns.md"},
+      ]},
+    {"Collections of primitives" = [
+      {"Lists" = [
+        {"Create and access a list" = "Lists/list_create.md"},
+        {"Operations on lists" = "Lists/list_ops.md"}
+      ]},  
+      {"Arrays" = [
+        {"Create and access an array" = "Arrays/array_create.md"},
+        {"Operations on arrays" = "Arrays/array_ops.md"}
+      ]},
+      {"Strings" = [
+        {"Create and access a string" = "Strings/string_create.md"},
+        {"Operations on strings" = "Strings/string_ops.md"}
+      ]},
+      {"Tuples" = "Syntax/tuples.md"}
+    ]},
+    {"User-defined types" = [
+      {"Variants" = "Syntax/variants.md"},
+      {"Records" = "Syntax/records.md"}
+    ]},
+    {"Control structures" = [
+      {"Overview" = "Controls/overview.md"},
+      {"if...else" = "Controls/ifelse.md"},
+      {"loops" = "Controls/loops.md"},
+      {"sequences" = "Controls/sequences.md"}
+    ]},
+    {"Data structures" = [
+      {"Maps" = "Data/maps.md"},
+      {"Hash tables" = "Data/hash_tables.md"},
+      {"Sequences" = "Data/sequences.md"}
+    ]},
+    {"Printing" = [
+      {"Simple printing" = "Printing/print.md"},
+      {"Format module" = "Printing/format.md"},
+      {"When debugging code" = "Printing/debugging.md"}
+    ]},
+    {"Modules" = [
+      {"Basic modules" = "Modules/modules.md"},
+      {"Functors" = "Modules/functor.md"},
+      {"Make" = "Modules/make.md"},
+      {"Applicative functors" = "Modules/applicative.md"},      
+      {"Monads" = "Modules/monads.md"}
+    ]}
+  ]},
+  {"Libraries" = [
+    {"Modules, libraries and packages" = "Libraries/packages.md"},
+    {"The standard library" = "Libraries/stdlib.md"},
+    {"Jane Street" = "Libraries/janest.md"},
+    {"Lwt" = "Libraries/lwt.md"}
+  ]},
+  {"Compiling and building" = [
+    {"Compiling code" = "Running/compile.md"},
+    {"Build with dune" = "Running/dune.md"}
+  ]},
+  {"Computer internals" = [
+    {"Processes, threads, frames, stack, heap" = "Internals/stackheap.md"},
+    {"Concurrency" = "Internals/concurrency.md"}
+  ]},
+  {"Appendix" = [
+    {"Glossary" = "Appendix/glossary.md"},
+    {"Extensions" = "Appendix/extensions.md"},
+    {"Syntax summary" = "Appendix/syntax.md"},
+    {"Inspecting code" = "Appendix/introspection.md"},
+    {"Finding stuff" = "Appendix/finding.md"},
+    {"Filename extensions" = "Appendix/extensions.md"}
+  ]}
+]
+extra_css = ["stylesheets/extra.css"]
+
+
+[project.theme]
+variant = "modern"
+features = [
+  "navigation.path",
+  "navigation.footer",
+]
+
+[[project.theme.palette]] 
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]

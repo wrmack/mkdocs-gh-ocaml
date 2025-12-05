@@ -29,7 +29,7 @@
 }
 .md-typeset .example> .admonition-title,
 .md-typeset .example > summary {
-  background-color: rgba(51,102, 204, 0.3);
+  /* background-color: rgba(51,102, 204, 0.3); */
   font-size: 12pt;
 }
 .md-typeset .example > .admonition-title::before,
@@ -46,12 +46,12 @@
 
 .md-typeset .admonition.quote,
 .md-typeset details.quote {
-  border-color: rgba(0, 153, 102, 0.5);
+  background-color: rgba(0, 111, 74, 0.2);
   font-size: 12pt;
 }
-.md-typeset .quote> .admonition-title,
+.md-typeset .quote > .admonition-title,
 .md-typeset .quote > summary {
-  background-color: rgba(0, 153, 102, 0.3);
+  /* background-color: rgba(0, 111, 74, 0.2); */
   font-size: 12pt;
 }
 .md-typeset .quote > .admonition-title::before,
@@ -69,12 +69,12 @@
 
 .md-typeset .admonition.understanding,
 .md-typeset details.understanding {
-  border-color: rgba(255, 195, 0, 0.5);
+  background-color: rgba(166, 127, 2, 0.2);
   font-size: 12pt;
 }
 .md-typeset .understanding> .admonition-title,
 .md-typeset .understanding > summary {
-  background-color: rgba(255, 195, 0, 0.4);
+  /* background-color: rgba(255, 195, 0, 0.2); */
   font-size: 12pt;
 }
 .md-typeset .understanding > .admonition-title::before,
@@ -92,12 +92,12 @@
 
 .md-typeset .admonition.reference,
 .md-typeset details.reference {
-  border-color: rgba(204, 102, 102, 0.7);
+  background-color: rgba(204, 102, 102, 0.2);
   font-size: 12pt;
 }
 .md-typeset .reference> .admonition-title,
 .md-typeset .reference > summary {
-  background-color: rgba(160, 80, 80, 0.3);
+  /* background-color: rgba(160, 80, 80, 0.3); */
   font-size: 12pt;
 }
 .md-typeset .reference > .admonition-title::before,

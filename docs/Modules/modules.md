@@ -1,5 +1,23 @@
 # Basic modules
 
+A module is a package of related definitions. Such a package is called a *structure* and is introduced by the `struct…end` construct, which contains an arbitrary sequence of definitions.
+
+Source files (`.ml`,`.mli`) are called `compilation units` and produce a module.
+
+!!! quote "[OCaml manual](https://ocaml.org/manual/5.4/moduleexamples.html#s%3Aseparate-compilation)"
+
+    In OCaml, compilation units are special cases of structures and signatures, and the relationship between the units can be explained easily in terms of the module system. A compilation unit `A` comprises two files:
+
+      -  the implementation file `A.ml`, which contains a sequence of definitions, analogous to the inside of a struct…end construct;
+      -  the interface file `A.mli`, which contains a sequence of specifications, analogous to the inside of a sig…end construct. 
+
+    These two files together define a structure named A as if the following definition was entered at top-level:
+
+    ```ocaml
+    module A: sig (* contents of file A.mli *) end
+            = struct (* contents of file A.ml *) end;;
+    ```
+
 ## Defining a module
 !!! example "Examples"
     ```ocaml
