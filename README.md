@@ -9,17 +9,22 @@ source venv/bin/activate
 To start the local server:
 
 ```bash
-mkdocs serve -a <ip address>:<port>
+zensical serve -a <ip address>:<port>
 ```
 
 To build the site:
 
 ```bash
-mkdocs build
+zensical build
 ```
 
-To deploy to Github pages:
+To deploy to Github pages just commit and push to main:
+- we now use Github actions with .github/workflows/docs.yml
+- in Github settings:
+  - Pages: under 'Build and deployment' set to Github actions
+  - Environment: gh-pages and main are allowed
 
-```bash
-mkdocs gh-deploy
-```
+[Github doc](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+
+
+[Zensical doc](https://zensical.org/docs/get-started/)
