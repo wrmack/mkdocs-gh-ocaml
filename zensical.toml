@@ -1,5 +1,5 @@
 [project]
-site_name = "Warwicks OCaml notes"
+site_name = "Warwick's OCaml notes"
 repo_url = "https://github.com/wrmack/mkdocs-gh-ocaml"
 nav = [
   {"Introduction" = "index.md"},

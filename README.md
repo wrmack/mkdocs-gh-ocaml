@@ -6,19 +6,20 @@ Enter the virtual environment:
 source venv/bin/activate
 ```
 
-To start the local server:
+## To start the local server:
 
 ```bash
 zensical serve -a <ip address>:<port>
 ```
 
-To build the site:
+## To build the site:
 
 ```bash
 zensical build
 ```
 
-To deploy to Github pages just commit and push to main:
+## To deploy to Github pages 
+- just commit and push to main
 - we now use Github actions with .github/workflows/docs.yml
 - in Github settings:
   - Pages: under 'Build and deployment' set to Github actions
