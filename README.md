@@ -19,8 +19,9 @@ zensical build
 ```
 
 ## To deploy to Github pages 
-- just commit and push to main
-- we now use Github actions with .github/workflows/docs.yml
+- build the site
+- commit and push to main
+- we now use Github actions with `.github/workflows/docs.yml`
 - in Github settings:
   - Pages: under 'Build and deployment' set to Github actions
   - Environment: gh-pages and main are allowed
