@@ -1,6 +1,6 @@
 [project]
 site_name = "Warwick's OCaml notes"
-repo_url = "https://github.com/wrmack/mkdocs-gh-ocaml"
+repo_url = "https://github.com/wrmack/docs-gh-ocaml"
 nav = [
   {"Introduction" = "index.md"},
   {"Getting started" = [
